@@ -2,7 +2,7 @@ from flask_wtf.csrf import CSRFProtect
 
 csrf = CSRFProtect(app)
 
-@app.route("/")
+@csrf.route("/")
 def pagina_inicial():
     return "Hello World Hamses Henrique - HMS SOFTWARE"
 
