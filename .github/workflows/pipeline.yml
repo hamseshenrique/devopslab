@@ -28,7 +28,11 @@ jobs:
       - name: Generate Report
         run: |
           pip install coverage
-          coverage run -m unittest discover
+          coverage run -m unittest
+
+      - name: Generate Report File
+        run: coverage xml
+
       - name: Generate Source
         run: coverage --source=.
 
