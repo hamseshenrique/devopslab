@@ -23,9 +23,12 @@ jobs:
         run:  pip install flask pytest flask-wtf
 
       - name: Unit Test
+        run: python -m unittest -v test
+
+      - name: Generate Report
         run: |
           pip install coverage
-          coverage run -m unittest discover
+          coverage run -m unittest discover --source=. xml
 
   SonarCloud:
     name: SonarCloud
