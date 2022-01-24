@@ -28,7 +28,9 @@ jobs:
       - name: Generate Report
         run: |
           pip install coverage
-          coverage run -m unittest discover --source=. xml
+          coverage run -m unittest discover
+      - name: Generate Source
+        run: coverage --source=.
 
   SonarCloud:
     name: SonarCloud
