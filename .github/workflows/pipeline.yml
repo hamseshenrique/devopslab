@@ -33,9 +33,6 @@ jobs:
       - name: Generate Report File
         run: coverage xml
 
-      - name: Generate Source
-        run: coverage --source=.
-
   SonarCloud:
     name: SonarCloud
     runs-on: ubuntu-latest
