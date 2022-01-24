@@ -23,7 +23,11 @@ jobs:
         run:  pip install flask pylint pytest pytest-cov flask-wtf
 
       - name: Unit Test
-        run: python -m unittest -v test --cov --cov-report=xml --cov-report=html
+        run: python -m unittest -v test
+        
+      - name: Running pytest
+        run: |
+          pytest -v  --cov --cov-report=xml --cov-report=html
 
       - uses: actions/upload-artifact@v2
         with:
