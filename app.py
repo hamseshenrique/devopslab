@@ -9,5 +9,8 @@ def pagina_inicial():
     return "Hello World Hamses Henrique - HMS SOFTWARE"      
 
 if __name__ == '__main__':
-    port = os.getenv('PORT')
-    app.run('0.0.0.0', port=port)
+    app.run()
+
+# if __name__ == '__main__':
+#     port = os.getenv('PORT')
+#     app.run('0.0.0.0', port=port)
